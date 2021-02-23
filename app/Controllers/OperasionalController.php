@@ -1,13 +1,13 @@
 <?php namespace App\Controllers;
 
-class Menu extends BaseController
+class OperasionalController extends BaseController
 {
 	public function index()
 	{
 		$data = [
 			'title' => 'Owner - Alshinky Frozen'
 		];
-		return view('owner/Menu', $data);
+		return view('owner/Operasional', $data);
 		// return view('welcome_message');
     }
 

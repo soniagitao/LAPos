@@ -18,7 +18,7 @@
 		  		<a href="#" class="img logo rounded-circle mb-5" style="background-image: url(assets1/images/logo.jpg);"></a>
 	        <ul class="list-unstyled components mb-5">
 	          <li>
-	            <a href="<?= base_url('/indexowner'); ?>" >Kelola Menu</a>
+	            <a href="<?= base_url('/menucontroller'); ?>" >Kelola Menu</a>
 	            <!-- <ul class="collapse list-unstyled" id="homeSubmenu">
                 <li>
                     <a href="#">Home 1</a>
@@ -32,10 +32,10 @@
 	            </ul> -->
 	          </li>
 	          <li>
-	              <a href="<?= base_url('/karyawan'); ?>">Data Karyawan</a>
+	              <a href="<?= base_url('/karyawancontroller'); ?>">Data Karyawan</a>
 	          </li>
 	          <li>
-                <a href="<?= base_url('/operasional'); ?>">Data Operasional</a>
+                <a href="<?= base_url('/operasionalcontroller'); ?>">Data Operasional</a>
               <!-- <ul class="collapse list-unstyled" id="pageSubmenu">
                 <li>
                     <a href="#">Page 1</a>
@@ -49,19 +49,19 @@
               </ul> -->
 	          </li>
             <li>
-              <a href="<?= base_url('/bahan'); ?>">Data Bahan Baku</a>
+              <a href="<?= base_url('/bahancontroller'); ?>">Data Bahan Baku</a>
 	          </li>
 	          <li class="active">
-              <a href="<?= base_url('/menu'); ?>">Data Menu & Resep</a>
+              <a href="<?= base_url('/menucontroller'); ?>">Data Menu & Resep</a>
 	          </li>
 	          <li>
-              <a href="<?= base_url('/stok'); ?>">Stok Menu</a>
+              <a href="<?= base_url('/stokcontroller'); ?>">Stok Menu</a>
               </li>
               <li>
-              <a href="<?= base_url('/laporan'); ?>">Laporan Transaksi</a>
+              <a href="<?= base_url('/laporancontroller'); ?>">Laporan Transaksi</a>
               </li>
               <li>
-              <a href="<?= base_url('/top'); ?>">Top Menu</a>
+              <a href="<?= base_url('/topcontroller'); ?>">Top Menu</a>
 	          </li>
 	        </ul>
 

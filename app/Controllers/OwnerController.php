@@ -1,16 +1,17 @@
 <?php namespace App\Controllers;
 
-class Home extends BaseController
+class OwnerController extends BaseController
 {
 	public function index()
 	{
 		$data = [
-			'title' => 'Home - Alshinky Frozen'
+			'title' => 'Owner - Alshinky Frozen'
 		];
-		return view('customer/Index', $data);
+		$users = new indexOwner();
+		return view('owner/index', $data);
 		// return view('welcome_message');
 	}
-
+	
 	//--------------------------------------------------------------------
 
 }

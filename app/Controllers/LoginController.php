@@ -1,6 +1,6 @@
 <?php namespace App\Controllers;
 
-class Owner extends BaseController
+class LoginController extends BaseController
 {
 	public function index()
 	{
