@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?= $title ?></title>
+<title>Alsinsky Frozen</title>
 <meta name="description" content="">
 <meta name="author" content="">
 
@@ -74,9 +74,7 @@
 <div id="features" class="text-center">
   <div class="container">
     <div class="section-title">
-    @php
-        echo date('d F Y');
-    @phpend
+    
       <h2>Our Menu</h2>
     </div>
     <div class="row">
