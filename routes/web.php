@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::view('/index', 'cashier/home');
+
 Route::view('/home', 'customer/Index');
 
 Route::view('/menuData', 'owner/Menu');
