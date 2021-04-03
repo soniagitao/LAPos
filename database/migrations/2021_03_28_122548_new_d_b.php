@@ -13,16 +13,6 @@ class NewDB extends Migration
      */
     public function up()
     {
-        //
-    }
-
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
         Schema::create('fraktur', function (Blueprint $table) {
             $table->id();
             $table->binary('foto');
@@ -71,11 +61,12 @@ class NewDB extends Migration
         Schema::create('user', function (Blueprint $table) {
             $table->id();
             $table->string('username', 45);
-            $table->string('password', 45);
-            $table->string('remember_token', 45);
+            $table->string('password', 100);
+            $table->rememberToken('remember_token');
             $table->enum('status', ['1', '0']);
+            $table->enum('level', ['1','0']);
             $table->unsignedBigInteger('karyawan_id');
-            $table->foreign('operasional_id')->references('id')->on('karyawan');
+            $table->foreign('karyawan_id')->references('id')->on('karyawan');
             $table->timestamps();
         });
 
@@ -111,11 +102,11 @@ class NewDB extends Migration
 
         Schema::create('resep', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('stok_bahan_id');
+            $table->foreign('stok_bahan_id')->references('id')->on('stok_bahan');
             $table->integer('jumlah');
             $table->unsignedBigInteger('menu_id');
             $table->foreign('menu_id')->references('id')->on('menu');
-            $table->unsignedBigInteger('stok_bahan_id');
-            $table->foreign('stok_bahan_id')->references('id')->on('stok_bahan');
             $table->timestamps();
         });
 
@@ -125,8 +116,17 @@ class NewDB extends Migration
             $table->string('jumlah', 45);
             $table->unsignedBigInteger('menu_id');
             $table->foreign('menu_id')->references('id')->on('menu');
-            $table->unsignedBigInteger('stok_bahan_id');
             $table->timestamps();
         });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+      
     }
 }
